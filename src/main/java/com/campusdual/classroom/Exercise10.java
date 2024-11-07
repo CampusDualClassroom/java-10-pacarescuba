@@ -12,7 +12,7 @@ public class Exercise10 {
     int count = 0;
     do {
       String ball = getBall();
-      if (ball == "azul") {
+      if (Objects.equals(ball, "azul")) {
         count++;
       }
       System.out.println("La bola es de color: " + ball);
@@ -26,7 +26,7 @@ public class Exercise10 {
   // 2 → azul
   // 3 → verde
   public static String getBall() {
-    String ball = "";
+    String ball;
     int num = randomWithRange(1, 3);
     switch (num) {
       case 1:
